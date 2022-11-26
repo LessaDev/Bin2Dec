@@ -6,7 +6,7 @@ export class BinForDecController {
 
     constructor(private readonly binForDecUseCase: BinForDecUseCase) {}
     @Get(':bin')
-    async getBinForDec(@Param('bin') bin: string): Promise<string> {
+    async getBinForDec(@Param('bin') bin: string) {
         return await this.binForDecUseCase.execute(bin)
     }
 }
